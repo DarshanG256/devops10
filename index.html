@@ -1,10 +1,137 @@
-<!DOCTYPE html> 
-<html> 
-<head> 
-<title>My Test App</title> 
-</head> 
-<body> 
-<h1>Hello from AWS CodeBuild + S3!</h1> 
-<p>This is a simple test page.</p> 
-</body> 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DevOps Experiment 8 - Updated</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 20px;
+      padding: 50px 60px;
+      text-align: center;
+      max-width: 600px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    }
+
+    .badge {
+      background: #00c853;
+      color: white;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 18px;
+      border-radius: 50px;
+      display: inline-block;
+      margin-bottom: 25px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      margin-bottom: 12px;
+      background: linear-gradient(90deg, #00c6ff, #0072ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .subtitle {
+      color: rgba(255,255,255,0.6);
+      font-size: 1rem;
+      margin-bottom: 35px;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .info-box {
+      background: rgba(255,255,255,0.06);
+      border-radius: 12px;
+      padding: 16px;
+    }
+
+    .info-box .label {
+      font-size: 11px;
+      color: rgba(255,255,255,0.4);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+
+    .info-box .value {
+      font-size: 15px;
+      font-weight: 600;
+      color: #00e5ff;
+    }
+
+    .footer {
+      font-size: 13px;
+      color: rgba(255,255,255,0.35);
+      margin-top: 10px;
+    }
+
+    .pulse {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background: #00c853;
+      border-radius: 50%;
+      margin-right: 6px;
+      animation: pulse 1.5s infinite;
+      vertical-align: middle;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(1.4); }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="badge">✅ Deployment Successful</div>
+    <h1>AWS CodeBuild + S3</h1>
+    <p class="subtitle">This updated page confirms your CI/CD pipeline is working!</p>
+
+    <div class="info-grid">
+      <div class="info-box">
+        <div class="label">Student</div>
+        <div class="value">Divyam Navin</div>
+      </div>
+      <div class="info-box">
+        <div class="label">Roll No.</div>
+        <div class="value">5023134</div>
+      </div>
+      <div class="info-box">
+        <div class="label">Experiment</div>
+        <div class="value">Exp 8 - DevOps</div>
+      </div>
+      <div class="info-box">
+        <div class="label">Pipeline</div>
+        <div class="value">CodeBuild → S3</div>
+      </div>
+    </div>
+
+    <p class="footer">
+      <span class="pulse"></span>
+      Deployed via AWS CodeBuild · S3 Static Hosting
+    </p>
+  </div>
+</body>
 </html>

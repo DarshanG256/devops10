@@ -12,4 +12,4 @@ phases:
   post_build:
     commands:
       - echo "Deploying to S3..."
-      - aws s3 sync . s3://darshan-bucket-devops-10 --delete
+      - aws s3 sync . s3://darshan-devops-8 --delete
